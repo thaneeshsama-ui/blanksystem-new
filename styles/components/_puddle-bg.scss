@@ -1,0 +1,11 @@
+.puddle-bg {
+  padding-inline: 7px;
+  color: var(--color-light);
+  background-color: var(--color-accent);
+  border-radius: var(--border-radius-small);
+
+  &--light {
+    color: var(--color-dark);
+    background-color: var(--color-light);
+  }
+}

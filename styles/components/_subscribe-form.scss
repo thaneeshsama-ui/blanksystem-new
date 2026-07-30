@@ -1,0 +1,27 @@
+@use '../helpers' as *;
+
+.subscribe-form {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  padding: 58px 40px;
+  background-color: var(--color-dark-alt);
+  border-radius: var(--border-radius);
+
+  @include desktop {
+    flex-direction: column;
+    row-gap: 22px;
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+  }
+
+  &__status {
+    flex-basis: 100%;
+    order: 3;
+    margin-top: 16px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--color-gray-alt);
+  }
+}
