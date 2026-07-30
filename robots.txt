@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://blanksystem.in/sitemap.xml
