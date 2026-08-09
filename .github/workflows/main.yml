@@ -1,0 +1,26 @@
+name: IndexNow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Notify IndexNow
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        run: |
+          curl -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "{
+              \"host\": \"blanksystem.in\",
+              \"key\": \"$INDEXNOW_KEY\",
+              \"keyLocation\": \"https://blanksystem.in/$INDEXNOW_KEY.txt\",
+              \"urlList\": [
+                \"https://blanksystem.in/\"
+              ]
+            }"
